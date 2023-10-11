@@ -24,7 +24,7 @@ const questions: IQuestionProps[] = [
   },
   {
     id: generateRandomId(),
-    title: 'TESTE (02)',
+    title: 'Pergunta 02',
     options: [
       {
         id: generateRandomId(),
@@ -35,6 +35,24 @@ const questions: IQuestionProps[] = [
       {
         id: generateRandomId(),
         name: 'TESTE (02)',
+        title: 'Não',
+        value: 0.23,
+      },
+    ],
+  },
+  {
+    id: generateRandomId(),
+    title: 'Pergunta 03',
+    options: [
+      {
+        id: generateRandomId(),
+        name: 'TESTE (03)',
+        title: 'Sim',
+        value: 0.72,
+      },
+      {
+        id: generateRandomId(),
+        name: 'TESTE (03)',
         title: 'Não',
         value: 0.23,
       },
