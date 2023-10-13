@@ -1,3 +1,7 @@
 export default function Home() {
-  return <div>Projeto Burnout Survey</div>;
+  return (
+    <div className="w-full h-full flex flex-col">
+
+    </div>
+  );
 }

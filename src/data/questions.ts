@@ -58,6 +58,24 @@ const questions: IQuestionProps[] = [
       },
     ],
   },
+  {
+    id: generateRandomId(),
+    title: 'Pergunta 04',
+    options: [
+      {
+        id: generateRandomId(),
+        name: 'TESTE (04)',
+        title: 'Sim',
+        value: 0.72,
+      },
+      {
+        id: generateRandomId(),
+        name: 'TESTE (04)',
+        title: 'Não',
+        value: 0.23,
+      },
+    ],
+  }
 ];
 
 export default questions;
