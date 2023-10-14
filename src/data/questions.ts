@@ -5,7 +5,7 @@ const generateRandomId = () => v4();
 
 const questions: IQuestionProps[] = [
   {
-    id: generateRandomId(),
+    id: 'question-1-burnout-survey',
     title: 'TESTE',
     options: [
       {
@@ -23,7 +23,7 @@ const questions: IQuestionProps[] = [
     ],
   },
   {
-    id: generateRandomId(),
+    id: 'question-2-burnout-survey',
     title: 'Pergunta 02',
     options: [
       {
@@ -41,7 +41,7 @@ const questions: IQuestionProps[] = [
     ],
   },
   {
-    id: generateRandomId(),
+    id: 'question-3-burnout-survey',
     title: 'Pergunta 03',
     options: [
       {
@@ -53,6 +53,24 @@ const questions: IQuestionProps[] = [
       {
         id: generateRandomId(),
         name: 'TESTE (03)',
+        title: 'Não',
+        value: 0.23,
+      },
+    ],
+  },
+  {
+    id: 'question-4-burnout-survey',
+    title: 'Pergunta 04',
+    options: [
+      {
+        id: generateRandomId(),
+        name: 'TESTE (04)',
+        title: 'Sim',
+        value: 0.72,
+      },
+      {
+        id: generateRandomId(),
+        name: 'TESTE (04)',
         title: 'Não',
         value: 0.23,
       },
