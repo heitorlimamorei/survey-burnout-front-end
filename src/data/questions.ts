@@ -75,7 +75,7 @@ const questions: IQuestionProps[] = [
         value: 0.23,
       },
     ],
-  }
+  },
 ];
 
 export default questions;

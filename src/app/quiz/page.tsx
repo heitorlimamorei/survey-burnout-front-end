@@ -43,7 +43,7 @@ export default function Quiz() {
 
   return !isCheckoutOpen ? (
     <div className="h-full w-full flex flex-col items-center justify-center">
-      <ProgressBar questionPosition={questionPosition}></ProgressBar>
+      <ProgressBar questions={questions} />
       <motion.div
         className="mt-6 h-[45%] py-5 rounded-xl my-2 w-[95%] bg-[#E7E7E7]"
         initial={{ opacity: 0, y: -20 }}
