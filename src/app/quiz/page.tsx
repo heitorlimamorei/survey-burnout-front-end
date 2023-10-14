@@ -42,30 +42,31 @@ export default function Quiz() {
   console.log(questions);
 
   return !isCheckoutOpen ? (
-    
     <div className="h-full w-full flex flex-col items-center justify-center">
       <ProgressBar questionPosition={questionPosition}></ProgressBar>
-      <motion.div className="mt-6 h-[45%] py-5 rounded-xl my-2 w-[95%] bg-[#E7E7E7]"
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        duration:1,
-        ease: [0, 0.71, 0.2, 1.01],
-        damping: 5,
-        stiffness: 100,
-        restDelta: 0.001,
-      }}>
-        <motion.h1 className="text-center p-2 text-3xl font-bold"
+      <motion.div
+        className="mt-6 h-[45%] py-5 rounded-xl my-2 w-[95%] bg-[#E7E7E7]"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           duration: 1,
           ease: [0, 0.71, 0.2, 1.01],
-          type: 'spring',
           damping: 5,
           stiffness: 100,
           restDelta: 0.001,
         }}>
+        <motion.h1
+          className="text-center p-2 text-3xl font-bold"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 1,
+            ease: [0, 0.71, 0.2, 1.01],
+            type: 'spring',
+            damping: 5,
+            stiffness: 100,
+            restDelta: 0.001,
+          }}>
           {currentQuestion.title}
         </motion.h1>
         <ul className="flex flex-col items-center">
@@ -89,10 +90,11 @@ export default function Quiz() {
           ))}
         </ul>
       </motion.div>
-      <motion.div className="h-[55%] text-white p-3 pl-4"
-      initial={{opacity:0, x:-100}}
-      animate={{opacity:1, x:0}}
-      transition={{duration:1.5}}>
+      <motion.div
+        className="h-[55%] text-white p-3 pl-4"
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.5 }}>
         <h1 className="text-4xl font-bold">O QUE É EXAMPLE?</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu
