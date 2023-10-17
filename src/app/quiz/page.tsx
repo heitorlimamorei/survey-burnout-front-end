@@ -109,6 +109,17 @@ export default function Quiz() {
       </motion.div>
     </div>
   ) : (
-    <div>Checkout is open</div>
+    <div className="h-full w-full flex flex-col items-center">
+      <h1 className="text-3xl text-white font-bold mb-8">Seu Resultado</h1>
+      <div className="flex flex-col items-center">
+        <div className="text-5xl text-white font-bold border-8 h-64 w-64 rounded-full flex items-center justify-center">
+          30%
+        </div>
+        <p className="p-3 bg-red-600 text-white m-1 self-end rounded-xl">
+          Disclaimer: Esse resultado não tem validação médica e é baseado apenas
+          em probabilidade, em caso de suspeita procure um profissional.
+        </p>
+      </div>
+    </div>
   );
 }
