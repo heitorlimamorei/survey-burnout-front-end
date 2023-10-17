@@ -58,7 +58,7 @@ const questions: IQuestionProps[] = [
       },
     ],
   },
-   {
+  {
     id: generateRandomId(),
     title: 'Pergunta 04',
     options: [

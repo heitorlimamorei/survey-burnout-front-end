@@ -11,7 +11,6 @@ export default function Quiz() {
   const { questions, answerQuestion } = useQuiz();
 
   const currentQuestion = questions[currentQuestionIndex];
-  const questionPosition = currentQuestionIndex + 1;
 
   const toggleCheckoutIsOpen = () => {
     setIsCheckoutOpen((c) => !c);
