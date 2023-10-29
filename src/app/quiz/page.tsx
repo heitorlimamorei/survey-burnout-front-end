@@ -38,8 +38,6 @@ export default function Quiz() {
 
   if (!questions.length) return null;
 
-  console.log(questions);
-
   return !isCheckoutOpen ? (
     <div className="h-full w-full flex flex-col items-center justify-center">
       <ProgressBar questions={questions} />
