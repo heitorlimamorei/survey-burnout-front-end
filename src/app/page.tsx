@@ -1,7 +1,13 @@
+'use client';
 import Image from 'next/image';
 import brain from '../../public/brain.png';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  const router = useRouter();
+  const handleGoToQuiz = () => {
+    router.push('/quiz');
+  };
   return (
     <div className="w-full h-full flex flex-col items-center">
       <div className="flex flex-row py-3">
@@ -22,7 +28,9 @@ export default function Home() {
         bibendum, eget varius augue molestie. Suspendisse pellentesque elementum
         consectetur. Maecenas eu interdum libero. Morbi ut leo sagittis dolor.
       </p>
-      <button className="p-4 text-xl w-[90%] rounded-full bg-[#29c2ba] text-white font-bold text-center">
+      <button
+        className="p-4 text-xl w-[90%] rounded-full bg-[#29c2ba] text-white font-bold text-center"
+        onClick={handleGoToQuiz}>
         INICIAR
       </button>
     </div>
