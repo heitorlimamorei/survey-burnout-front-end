@@ -59,7 +59,7 @@ const questions: IQuestionProps[] = [
     ],
   },
   {
-    id: generateRandomId(),
+    id: 'question-4-burnout-survey',
     title: 'Pergunta 04',
     options: [
       {

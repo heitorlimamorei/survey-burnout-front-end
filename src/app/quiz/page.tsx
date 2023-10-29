@@ -37,7 +37,6 @@ export default function Quiz() {
   */
 
   if (!questions.length) return null;
-
   return !isCheckoutOpen ? (
     <div className="h-full w-full flex flex-col items-center justify-center">
       <ProgressBar questions={questions} />
@@ -108,7 +107,7 @@ export default function Quiz() {
     </div>
   ) : (
     <>
-      <Checkout />
+      <Checkout questions={questions} />
     </>
   );
 }

@@ -1,17 +1,43 @@
 'use client';
-import React, { useState } from 'react';
+import { memo, useState } from 'react';
+import { INormalizedQuestionProps } from '@/types/QuizTypes';
 import { useRouter } from 'next/navigation';
+import axios from 'axios';
 
-export default function Checkout() {
+const Checkout = ({ questions }: { questions: INormalizedQuestionProps[] }) => {
   const [authorize, setAuthorize] = useState<boolean>(true);
+  const [email, setEmail] = useState<string>('');
+
   const router = useRouter();
 
-  const handleAuthorize = () => {
-    setAuthorize((authorize) => !authorize);
+  const handleGoToResults = async (): Promise<void> => {
+    const status = await sendSurvey();
+    if (status !== 200) return;
+    router.push('/quiz/results');
   };
 
-  const handleGoToResults = () => {
-    router.push('/quiz/results');
+  const getResult = (): number => {
+    let result = questions[0].answer;
+    questions.forEach((c, i) => (i > 0 ? (result = result * c.answer) : null));
+    return result * 0.18;
+  };
+
+  const sendSurvey = async () => {
+    if (!authorize || !email) return;
+    const answers = questions.map(({ id, answer }) => ({
+      questionId: id,
+      value: answer,
+    }));
+    const result = getResult();
+    const resp = await axios.post(
+      'https://survey-burnout-api.onrender.com/survey',
+      {
+        author: email,
+        result: result,
+        answers: answers,
+      }
+    );
+    return resp.status;
   };
 
   return (
@@ -22,13 +48,18 @@ export default function Checkout() {
           <label className="font-semibold" htmlFor="text">
             Email
           </label>
-          <input className="rounded-md h-[2rem]" type="text" />
+          <input
+            className="rounded-md h-[2rem]"
+            type="text"
+            value={email}
+            onChange={(ev) => setEmail(ev.target.value)}
+          />
         </div>
         <div className="flex flex-row my-2 px-5">
           <input
             type="checkbox"
             checked={authorize}
-            onChange={handleAuthorize}
+            onChange={() => setAuthorize((authorize) => !authorize)}
           />
           <p className="text-sm ml-1">Concedo meus dados para uso futuro</p>
         </div>
@@ -40,4 +71,6 @@ export default function Checkout() {
       </div>
     </div>
   );
-}
+};
+
+export default memo(Checkout);
