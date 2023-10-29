@@ -8,7 +8,7 @@ export default function Home() {
         <h1 className="text-5xl font-bold text-white mt-5">QUIZ BURNOUT</h1>
         <Image src={brain} width={120} alt="" />
       </div>
-      <p className='text-white p-2'>
+      <p className="text-white p-2">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget arcu
         vel neque mollis consequat. Ut ultricies, tortor mattis ultricies
         fringilla, dui diam placerat turpis, rutrum tincidunt metus leo sit amet
@@ -22,7 +22,7 @@ export default function Home() {
         bibendum, eget varius augue molestie. Suspendisse pellentesque elementum
         consectetur. Maecenas eu interdum libero. Morbi ut leo sagittis dolor.
       </p>
-      <button className='p-4 text-xl w-[90%] rounded-full bg-[#29c2ba] text-white font-bold text-center'>
+      <button className="p-4 text-xl w-[90%] rounded-full bg-[#29c2ba] text-white font-bold text-center">
         INICIAR
       </button>
     </div>

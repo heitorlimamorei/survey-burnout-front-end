@@ -1,11 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
 
-interface ResultsProps {
-  scale: number;
-}
-
-export default function Results({ scale }: ResultsProps) {
+export default function Results() {
+  const scale = 10;
   function getBgClass(scale: number): string {
     const colors = [
       'bg-[#0292cf]',
