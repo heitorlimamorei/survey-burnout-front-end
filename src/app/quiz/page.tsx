@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import useQuiz from '@/hooks/useQuiz';
 import ProgressBar from '@/components/ProgressBar';
 import React, { useState } from 'react';
+import Checkout from '@/components/Checkout';
 
 export default function Quiz() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const [isCheckoutOpen, setIsCheckoutOpen] = useState<boolean>(false);
-
   const { questions, answerQuestion } = useQuiz();
 
   const currentQuestion = questions[currentQuestionIndex];
@@ -37,7 +37,6 @@ export default function Quiz() {
   */
 
   if (!questions.length) return null;
-
   return !isCheckoutOpen ? (
     <div className="h-full w-full flex flex-col items-center justify-center">
       <ProgressBar questions={questions} />
@@ -107,6 +106,8 @@ export default function Quiz() {
       </motion.div>
     </div>
   ) : (
-    <div>Checkout is open</div>
+    <>
+      <Checkout questions={questions} />
+    </>
   );
 }
