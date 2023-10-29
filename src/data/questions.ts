@@ -6,7 +6,7 @@ const generateRandomId = () => v4();
 const questions: IQuestionProps[] = [
   {
     id: 'question-1-burnout-survey',
-    title: 'TESTE',
+    title: 'Você se sente exausto emocionalmente?',
     options: [
       {
         id: generateRandomId(),
@@ -24,7 +24,8 @@ const questions: IQuestionProps[] = [
   },
   {
     id: 'question-2-burnout-survey',
-    title: 'Pergunta 02',
+    title:
+      'A falta de realização no âmbito profissional, é um sentimento comum para você?',
     options: [
       {
         id: generateRandomId(),
@@ -42,7 +43,7 @@ const questions: IQuestionProps[] = [
   },
   {
     id: 'question-3-burnout-survey',
-    title: 'Pergunta 03',
+    title: 'Você sofre de estresse crônico?',
     options: [
       {
         id: generateRandomId(),
@@ -59,8 +60,8 @@ const questions: IQuestionProps[] = [
     ],
   },
   {
-    id: 'question-4-burnout-survey',
-    title: 'Pergunta 04',
+    id: generateRandomId(),
+    title: 'Se encaixa no quadro de despersonalização?',
     options: [
       {
         id: generateRandomId(),
