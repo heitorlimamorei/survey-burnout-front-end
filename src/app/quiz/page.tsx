@@ -41,7 +41,7 @@ export default function Quiz() {
     <div className="h-full w-full flex flex-col items-center justify-center">
       <ProgressBar questions={questions} />
       <motion.div
-        className="mt-6 h-[45%] py-5 rounded-xl my-2 w-[95%] bg-[#E7E7E7]"
+        className="h-[50%] py-5 rounded-xl my-2 w-[95%] bg-[#E7E7E7]"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -52,7 +52,7 @@ export default function Quiz() {
           restDelta: 0.001,
         }}>
         <motion.h1
-          className="text-center p-2 text-3xl font-bold"
+          className="text-center p-2 text-xl font-bold"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -87,7 +87,7 @@ export default function Quiz() {
         </ul>
       </motion.div>
       <motion.div
-        className="h-[55%] text-white p-3 pl-4"
+        className="h-[45%] text-white p-3 pl-4"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5 }}>

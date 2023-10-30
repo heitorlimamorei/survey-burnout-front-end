@@ -11,15 +11,15 @@ const Checkout = ({ questions }: { questions: INormalizedQuestionProps[] }) => {
   const router = useRouter();
 
   const handleGoToResults = async (): Promise<void> => {
-    const status = await sendSurvey();
+    const { status, result } = await sendSurvey();
     if (status !== 200) return;
-    router.push('/quiz/results');
+    router.push(`/quiz/results?qr=${result}`);
   };
 
   const getResult = (): number => {
     let result = questions[0].answer;
     questions.forEach((c, i) => (i > 0 ? (result = result * c.answer) : null));
-    return result * 0.18;
+    return parseFloat(result.toFixed(6));
   };
 
   const sendSurvey = async () => {
@@ -37,7 +37,7 @@ const Checkout = ({ questions }: { questions: INormalizedQuestionProps[] }) => {
         answers: answers,
       }
     );
-    return resp.status;
+    return { status: resp.status, result };
   };
 
   return (

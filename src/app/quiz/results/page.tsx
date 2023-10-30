@@ -1,8 +1,20 @@
 'use client';
+import table from '@/data/probability-table';
 import { motion } from 'framer-motion';
+import _ from 'lodash';
+import { useSearchParams } from 'next/navigation';
 
 export default function Results() {
-  const scale = 10;
+  const searchParams = useSearchParams();
+
+  const getScale = () => {
+    const quizResult = parseFloat(searchParams.get('qr'));
+    console.log(table);
+    const index = _.findIndex(table, (c) => c == quizResult) + 1;
+    return index;
+  };
+
+  const scale = getScale();
   function getBgClass(scale: number): string {
     const colors = [
       'bg-[#0292cf]',
@@ -40,7 +52,7 @@ export default function Results() {
             animate={{ scale: 1 }}
             transition={{ type: 'linear', duration: 1 }}>
             <motion.div
-              className="w-fit h-fit bg-white rounded-full pt-4 pb-3 px-3 text-center"
+              className="rounded-full text-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5 }}>

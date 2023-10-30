@@ -6,6 +6,10 @@ interface NormalizedQuestionOption {
   opt1: number;
 }
 
+const roundListNumbers = (collection: number[], n: number): number[] => {
+  return collection.map((c) => parseFloat(c.toFixed(n)));
+};
+
 const normalizeQuestionsOptions = (): NormalizedQuestionOption[] => {
   return questions.map((question) => {
     return {
@@ -31,7 +35,7 @@ function tableGenerator(opts: NormalizedQuestionOption[]): number[] {
     result.push(opts[0].opt0 * cValue);
     result.push(opts[0].opt1 * cValue);
   }
-  return result.map((c) => c * 0.18); // appling the large number theorem
+  return roundListNumbers(result, 6);
 }
 
 const table = _.sortBy(tableGenerator(optionsList), (a) => a);
