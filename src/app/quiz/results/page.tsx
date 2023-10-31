@@ -62,10 +62,11 @@ export default function Results() {
         </div>
         <h2 className="text-white text-4xl">Nível {scale}</h2>
         <p className="text-white p-2 text-justify">
-          Explicação da escala aqui: Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Fusce eu aliquam metus, sed sollicitudin tellus.
-          Curabitur sagittis, augue sit amet pharetra mattis, ex eros lacinia
-          lectus, non vehicula arcu magna vitae lorem.
+          A escala produzida pelo nosso grupo possui 16 níveis do menor ao maior
+          em relação a probabilidade de possuir a síndrome de burnout. Tal
+          escala foi construída a partir da frequência dos sintomas inseridos no
+          quiz em indivíduos com a doença, dessa forma, a presença de vários
+          sintomas indica uma chance maior do usuário apresentar burnout.
         </p>
         <button className="p-4 text-xl w-[90%] m-5 rounded-full bg-[#29c2ba] text-white font-bold text-center">
           Avalie nosso trabalho!
