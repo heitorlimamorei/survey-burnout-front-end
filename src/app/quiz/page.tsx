@@ -91,18 +91,8 @@ export default function Quiz() {
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5 }}>
-        <h1 className="text-4xl font-bold">O QUE É EXAMPLE?</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu
-          aliquam metus, sed sollicitudin tellus. Curabitur sagittis, augue sit
-          amet pharetra mattis, ex eros lacinia lectus, non vehicula arcu magna
-          vitae lorem. Morbi euismod porttitor molestie. In hac habitasse platea
-          dictumst. In lobortis vel lorem eu egestas. Quisque id lacus ipsum.
-          Aliquam porttitor nulla in risus suscipit, in scelerisque massa
-          porttitor. Nunc fringilla justo eget leo faucibus, ac ultricies elit
-          ullamcorper. Pellentesque habitant morbi tristique senectus et netus
-          et malesuada fames ac turpis egestas.
-        </p>
+        <h1 className="text-4xl font-bold">O QUE É?</h1>
+        <p>{currentQuestion.description}</p>
       </motion.div>
     </div>
   ) : (
