@@ -5,6 +5,50 @@ const generateRandomId = () => v4();
 
 const questions: IQuestionProps[] = [
   {
+    id: 'question-0-burnout-survey',
+    title: 'Qual é a sua faixa idade?',
+    description: '',
+    options: [
+      {
+        id: generateRandomId(),
+        name: '13 - 29 anos',
+        title: '13 - 29 anos',
+        value: 0.58,
+      },
+      {
+        id: generateRandomId(),
+        name: '30 - 43 anos',
+        title: '30 - 43 anos',
+        value: 0.59,
+      },
+      {
+        id: generateRandomId(),
+        name: '44 - 60 anos',
+        title: '44 - 60 anos',
+        value: 0.31,
+      },
+    ],
+  },
+  {
+    id: 'question-4-burnout-survey',
+    title: 'Qual é o seu sexo ?',
+    description: '',
+    options: [
+      {
+        id: generateRandomId(),
+        name: 'Masculino',
+        title: 'Masculino',
+        value: 0.31,
+      },
+      {
+        id: generateRandomId(),
+        name: 'Feminino',
+        title: 'Feminino',
+        value: 0.43,
+      },
+    ],
+  },
+  {
     id: 'question-1-burnout-survey',
     title: 'Você se sente exausto emocionalmente?',
     description:
@@ -66,7 +110,7 @@ const questions: IQuestionProps[] = [
     ],
   },
   {
-    id: generateRandomId(),
+    id: 'question-5-burnout-survey',
     title: 'Se encaixa no quadro de despersonalização?',
     description:
       'A despersonalização é caracterizada pela insensibilidade emocional do profissional, que passa a tratar clientes e colegas como objetos. Trata-se de um aspecto fundamental para caracterizar a síndrome de burnout,  já que suas outras características podem ser encontradas nos quadros depressivos em geral. É um sintoma raro que, entretanto, grande parte das pessoas que o manifestam, em sincronia com os demais sinais, apresenta burnout.',
