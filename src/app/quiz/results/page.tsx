@@ -10,8 +10,11 @@ export default function Results() {
   const getScale = () => {
     const quizResult = parseFloat(searchParams.get('qr'));
     console.log(table);
-    const index = _.findIndex(table, (c) => c == quizResult) + 1;
-    return index;
+    const index = _.findIndex(table, (c) => c == quizResult);
+    console.log(index);
+    const scaleRaw = (index * 16) / table.length;
+    console.log(scaleRaw);
+    return Math.round(scaleRaw == 0 ? scaleRaw + 1 : scaleRaw);
   };
 
   const scale = getScale();
@@ -35,8 +38,8 @@ export default function Results() {
       'bg-[#61002d]',
     ];
 
-    const index = Math.floor(((scale - 1) / 16) * colors.length);
-    return colors[index];
+    const index = scale - 1;
+    return colors[index <= 16 ? index : 16];
   }
 
   return (
@@ -60,7 +63,9 @@ export default function Results() {
             </motion.div>
           </motion.div>
         </div>
-        <h2 className="text-white text-4xl">Nível {scale}</h2>
+        <h2 className="text-white text-4xl">
+          Nível {scale <= 16 ? scale : 16}
+        </h2>
         <p className="text-white p-2 text-justify">
           A escala produzida pelo nosso grupo possui 16 níveis do menor ao maior
           em relação a probabilidade de possuir a síndrome de burnout. Tal
