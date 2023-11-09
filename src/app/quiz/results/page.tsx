@@ -41,7 +41,10 @@ export default function Results() {
     const index = scale - 1;
     return colors[index <= 16 ? index : 16];
   }
-
+  const handleRedirect = () => {
+    window.location.href =
+      'https://forms.office.com/Pages/ResponsePage.aspx?id=jQCVJyeleEy6Lb9MnBfeCzmwwLZ60vhFuxTpRa1B8Z9UOVpXUVRNQUJIV0VQNUo3SDU2UTdDNlhMQS4u&origin=QRCode';
+  };
   return (
     <div className="h-full w-full flex flex-col items-center">
       <h1 className="text-3xl text-white font-bold mb-8">Seu Resultado</h1>
@@ -73,7 +76,9 @@ export default function Results() {
           quiz em indivíduos com a doença, dessa forma, a presença de vários
           sintomas indica uma chance maior do usuário apresentar burnout.
         </p>
-        <button className="p-4 text-xl w-[90%] m-5 rounded-full bg-[#29c2ba] text-white font-bold text-center">
+        <button
+          className="p-4 text-xl w-[90%] m-5 rounded-full bg-[#29c2ba] text-white font-bold text-center"
+          onClick={handleRedirect}>
           Avalie nosso trabalho!
         </button>
         <p className="absolute p-3 bg-red-600 h-fit text-justify text-white m-1 bottom-0 rounded-xl">
