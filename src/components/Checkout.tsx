@@ -19,7 +19,7 @@ const Checkout = ({ questions }: { questions: INormalizedQuestionProps[] }) => {
   const getResult = (): number => {
     let result = questions[0].answer;
     questions.forEach((c, i) => (i > 0 ? (result = result * c.answer) : null));
-    return parseFloat(result.toFixed(6));
+    return parseFloat(result.toFixed(8));
   };
 
   const sendSurvey = async () => {
@@ -39,9 +39,10 @@ const Checkout = ({ questions }: { questions: INormalizedQuestionProps[] }) => {
     );
     return { status: resp.status, result };
   };
+
   const handleKeyDown = (event) => {
-    if (event.key ==='Enter') {
-      handleGoToResults()
+    if (event.key === 'Enter') {
+      handleGoToResults();
     }
   };
 

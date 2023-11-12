@@ -13,7 +13,7 @@ export default function Results() {
     const index = _.findIndex(table, (c) => c == quizResult);
     console.log(index);
     const scaleRaw = (index * 16) / table.length;
-    console.log('a' + scaleRaw);
+    console.log(scaleRaw);
     return Math.round(scaleRaw == 0 ? scaleRaw + 1 : scaleRaw);
   };
 
