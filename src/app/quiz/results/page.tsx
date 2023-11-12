@@ -13,7 +13,7 @@ export default function Results() {
     const index = _.findIndex(table, (c) => c == quizResult);
     console.log(index);
     const scaleRaw = (index * 16) / table.length;
-    console.log(scaleRaw);
+    console.log('a' + scaleRaw);
     return Math.round(scaleRaw == 0 ? scaleRaw + 1 : scaleRaw);
   };
 
@@ -76,7 +76,7 @@ export default function Results() {
         <button className="p-4 text-xl w-[90%] m-5 rounded-full bg-[#29c2ba] text-white font-bold text-center">
           Avalie nosso trabalho!
         </button>
-        <p className="absolute p-3 bg-red-600 h-fit text-justify text-white m-1 bottom-0 rounded-xl">
+        <p className="p-3 bg-red-600 h-fit text-justify text-white m-1 bottom-0 rounded-xl">
           Disclaimer: Esse resultado não tem validação médica e é baseado apenas
           em probabilidade, em caso de suspeita procure um profissional.
         </p>

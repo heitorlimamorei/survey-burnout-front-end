@@ -1,5 +1,5 @@
 'use client';
-import { memo, useState } from 'react';
+import { KeyboardEventHandler, memo, useState } from 'react';
 import { INormalizedQuestionProps } from '@/types/QuizTypes';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
@@ -39,6 +39,11 @@ const Checkout = ({ questions }: { questions: INormalizedQuestionProps[] }) => {
     );
     return { status: resp.status, result };
   };
+  const handleKeyDown = (event) => {
+    if (event.key ==='Enter') {
+      handleGoToResults()
+    }
+  };
 
   return (
     <div className="h-full w-full flex flex-col items-center">
@@ -51,6 +56,7 @@ const Checkout = ({ questions }: { questions: INormalizedQuestionProps[] }) => {
           <input
             className="rounded-md h-[2rem]"
             type="text"
+            onKeyDown={handleKeyDown}
             value={email}
             onChange={(ev) => setEmail(ev.target.value)}
           />
