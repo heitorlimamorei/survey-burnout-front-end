@@ -129,44 +129,6 @@ const questions: IQuestionProps[] = [
       },
     ],
   },
-  {
-    id: 'question-6-burnout-survey',
-    title: 'Você sente uma constante falta de interrese, motivação ou energia quando se trata do seu trabalho?',
-    description:'',
-    options: [
-      {
-        id: generateRandomId(),
-        name: 'TESTE (05)',
-        title: 'Sim',
-        value: 0.26,
-      },
-      {
-        id: generateRandomId(),
-        name: 'TESTE (05)',
-        title: 'Não',
-        value: 0.64,
-      },
-    ],
-  },
-  {
-    id: 'question-7-burnout-survey',
-    title: 'Você experiencia altos níveis de fadiga e cansaço?',
-    description:'',
-    options: [
-      {
-        id: generateRandomId(),
-        name: 'TESTE (04)',
-        title: 'Sim',
-        value: 0.44,
-      },
-      {
-        id: generateRandomId(),
-        name: 'TESTE (04)',
-        title: 'Não',
-        value: 0.56,
-      },
-    ],
-  },
 ];
 
 export default questions;
