@@ -91,7 +91,12 @@ export default function Quiz() {
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5 }}>
-        <h1 className="text-4xl font-bold">O QUE É?</h1>
+        <h1
+          className={`text-4xl font-bold ${
+            currentQuestion.description == '' ? 'hidden' : ''
+          }`}>
+          O QUE É?
+        </h1>
         <p>{currentQuestion.description}</p>
       </motion.div>
     </div>

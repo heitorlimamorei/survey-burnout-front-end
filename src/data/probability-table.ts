@@ -30,7 +30,7 @@ function tableGenerator(opts: number[][]): number[] {
     });
   }
 
-  return roundListNumbers(result, 6);
+  return roundListNumbers(result, 8);
 }
 
 const table = _.sortBy(tableGenerator(optionsList), (a) => a);

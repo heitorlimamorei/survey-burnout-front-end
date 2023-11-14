@@ -81,7 +81,7 @@ export default function Results() {
           onClick={handleRedirect}>
           Avalie nosso trabalho!
         </button>
-        <p className="absolute p-3 bg-red-600 h-fit text-justify text-white m-1 bottom-0 rounded-xl">
+        <p className="p-3 bg-red-600 h-fit text-justify text-white m-1 bottom-0 rounded-xl">
           Disclaimer: Esse resultado não tem validação médica e é baseado apenas
           em probabilidade, em caso de suspeita procure um profissional.
         </p>
